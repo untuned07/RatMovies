@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #373b69;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+.navbar{
+    background-color: #31345d;
+    overflow: hidden;
+    /* display: flex; */
+    /* justify-content: left; */
+    /* justify-content: right; */
+    padding: 1rem;
+    align-items: center;
+}
+
+.navbar h2 {
+    margin-left: 2rem;
+    float: left;
+    text-align: center;
+}
+
+.search {
+    /* align-items: center; */
+    float: right;
+    /* margin-left: 20rem; */
+    background-color: transparent;
+    border: 2px solid #22254b;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+h2{
+    /* margin-right: 5rem; */
+    color: #eee;
+}
+
+.search::placeholder{
+    color: #7378c5;
+}
+
+.search:focus{
+    background-color: #22254b;
+    outline: none;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie{ 
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    background-color: #525892;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    /* height: 400px; */
+    width: 300px;
+}
+
+.movie img {
+    /* display: inline-block; */
+    /* object-fit: cover; */
+    /* height: 400px; */
+    width: 100%;
+}
+
+.movie-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    color: #eee;
+    letter-spacing: 0.5px;
+    align-items: center;
+}
+
+.movie-info h3{
+    margin: 0;
+}
+
+.movie-info div{
+    background-color: #22254b;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+
+.movie-info div.green {
+    color: rgb(27, 212, 27);
+}
+
+.movie-info div.orange {
+    color:orange;
+}
+
+.movie-info div.red {
+    color: red;
+}
+
+.overview {
+    background-color: #fff;
+    padding: 1rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    /* top: 0; */
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(102%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h4{
+    margin-top: 0;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
